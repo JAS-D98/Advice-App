@@ -36,7 +36,7 @@ export default function FetchApi() {
         {loading && <p>Loading Please Wait...</p>}
         {quote && <p>{quote}</p>}
         </div>
-        <button onClick={getQuote} disabled={loading}>Get Quote</button>
+        <button onClick={getQuote} disabled={loading}>Click to Generate a Random Quote</button>
     </div>
     </>
   )
