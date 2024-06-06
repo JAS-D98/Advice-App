@@ -34,7 +34,7 @@ export default function SearchApi() {
            setQuotesResults(data.slips);
            setLoading(false)
         }catch(error){
-            setError(`Could not find advice, please check your internet connection and try again`);
+            setError(`Could not find advice, please heck your internet connection and try again`);
             setQuotesResults(null)
             setLoading(false)
         }
