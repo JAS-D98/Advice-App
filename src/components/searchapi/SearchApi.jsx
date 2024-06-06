@@ -53,7 +53,7 @@ export default function SearchApi() {
              <BarLoader color={color} loading={loading} cssOverride={override} size={150} aria-label="Loading Spinner" data-testid="loader"/>
             </>
             }
-            {error && <p>{error}</p>}
+            {error && <p className='error'>{error}</p>}
             {quoteResults &&(<h1>{ quoteResults.length > 0 ? `${quoteResults.length} Results Found` : 'No Results Found'}</h1>)}
            {quoteResults &&
            <div>
