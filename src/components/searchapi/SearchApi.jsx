@@ -16,6 +16,8 @@ export default function SearchApi() {
     const [error, setError]=useState(null);
     const [color, setColor] = useState("#002D62");
 
+    const briefMessage=document.querySelector('h2');
+    
     const handleWord=(e)=>{
         setSearch(e.target.value)
     }
@@ -33,8 +35,9 @@ export default function SearchApi() {
         //    console.log(data.slips);
            setQuotesResults(data.slips);
            setLoading(false)
+           briefMessage.style.display='none';
         }catch(error){
-            setError(`Could not find advice, please heck your internet connection and try again`);
+            setError(`Could not find advice, please check your internet connection and try again`);
             setQuotesResults(null)
             setLoading(false)
         }
@@ -55,9 +58,10 @@ export default function SearchApi() {
             }
             {error && <p className='error'>{error}</p>}
             {quoteResults &&(<h1>{ quoteResults.length > 0 ? `${quoteResults.length} Results Found` : 'No Results Found'}</h1>)}
+            <h2>Incase of any Results Found, they will be displayed below.</h2>
            {quoteResults &&
            <div>
-           <h1>All Advices About Your Search Will Be Listed Below</h1>
+           <h1>Your Search Results are Listed Below</h1>
             <ol>
             {quoteResults.map((result, i)=>{
                     return(
