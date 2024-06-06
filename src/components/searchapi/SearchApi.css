@@ -52,6 +52,10 @@
 .loader, .error{
     font-size: 1.4em;
 }
+.search-results h2{
+    font-size: 1.4em;
+    color: var(--blue-color);
+}
 
 @media screen and (max-width:42.2em) {
     .search-box{

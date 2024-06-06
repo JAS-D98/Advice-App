@@ -58,7 +58,7 @@ export default function SearchApi() {
             }
             {error && <p className='error'>{error}</p>}
             {quoteResults &&(<h1>{ quoteResults.length > 0 ? `${quoteResults.length} Results Found` : 'No Results Found'}</h1>)}
-            <h2>Incase of any Results Found, they will be displayed below.</h2>
+            <h2>Incase of any results found from your search, they will be displayed below.</h2>
            {quoteResults &&
            <div>
            <h1>Your Search Results are Listed Below</h1>
